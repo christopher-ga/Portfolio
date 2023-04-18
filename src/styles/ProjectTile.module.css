@@ -1,0 +1,130 @@
+@font-face {
+    font-family: 'calibre medium';
+    src: url("../fonts/CalibreMedium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'calibre r';
+    src: url("../fonts/regularcal.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'sf light';
+    src: url("../fonts/SF-Mono-Font-master/SFMono-Light.otf") format("opentype");
+}
+
+.grid_container {
+    display: none;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    position: relative;
+    min-height: 200px;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-bottom: 50px;
+}
+
+.background_image {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text_container {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    text-align: start;
+    padding: 50px;
+    box-shadow: 0 10px 30px -15px var(--burnt-shadow);
+
+    background-color: rgba(138, 65, 39, 0.96);
+}
+
+
+.tag {
+    font-family: "sf light";
+    color: var(--highlight);
+    font-size: 16px;
+    margin-bottom: 40px;
+}
+
+.project_title {
+    font-family: "calibre medium";
+    color: var(--lightest);
+    font-size: 35px;
+}
+
+
+.testBox p {
+    color: var(--medium);
+    font-family: "calibre reg";
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.tech_row {
+    display: grid;
+    justify-content: start;
+    grid-template-columns: repeat(4, auto);
+    margin-top: 50px;
+
+    font-family: "sf light";
+    font-size: 16px;
+    color: var(--medium);
+}
+
+.tech_row p {
+    margin-right: 50px;
+}
+
+.icon_container {
+    display: flex;
+    margin-top: 30px;
+    gap: 30px;
+}
+
+.icon_container i {
+    font-size: 25px;
+    color: var(--lightest);
+}
+
+.icon_container i:hover {
+    color: var(--highlight);
+}
+
+.grid_container:hover .project_title {
+    color: var(--highlight);
+    transition: color 0.3s ease-in-out;
+}
+
+@media (max-width: 790px) {
+    .grid_container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        position: relative;
+        min-height: 200px;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-bottom: 50px;
+    }
+
+    .tech_row {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin-top: 40px;
+        row-gap: 20px
+    }
+
+    .tech_row p {
+        margin-right: 20px;
+    }
+}

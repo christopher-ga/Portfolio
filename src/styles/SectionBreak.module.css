@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'calibre medium';
+    src: url("../fonts/CalibreMedium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'calibre r';
+    src: url("../fonts/regularcal.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'sf light';
+    src: url("../fonts/SF-Mono-Font-master/SFMono-Light.otf") format("opentype");
+}
+
+
+.about_grid {
+    max-width: 1300px;
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    gap: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 300px;
+}
+
+.about_left h2 {
+    margin: 0;
+    padding-right: 10px;
+    font-family: "calibre medium";
+    color: var(--lightest);
+    font-size: 30px;
+}
+
+.header_line_container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.number_font {
+    font-family: "sf light";
+    font-size: 19px;
+}
+
+.line {
+    height: 1px;
+    width: 100%;
+    background-color: var(--lightest);
+}
+
+@media (max-width: 790px) {
+
+    .about_grid {
+        max-width: 1300px;
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        gap: 0px;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin: 0 auto;
+    }
+
+    .about_right {
+        justify-self: center;
+    }
+}

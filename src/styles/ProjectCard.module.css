@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'calibre medium';
+    src: url("../fonts/CalibreMedium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'calibre r';
+    src: url("../fonts/regularcal.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'sf light';
+    src: url("../fonts/SF-Mono-Font-master/SFMono-Light.otf") format("opentype");
+}
+
+.header {
+    max-width: 1500px;
+    display: grid;
+    justify-items: center;
+    font-family: "calibre medium";
+    font-size: 30px;
+    color: var(--lightest);
+    margin: 300px auto 80px;
+}
+
+.projects_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+    max-width: 1300px;
+    gap: 30px;
+
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+
+    justify-items: center;
+    padding-left: 150px;
+    padding-right: 150px;
+}
+
+.container {
+    background-color: var(--darkest-l);
+    box-shadow: 0 10px 30px -15px var(--burnt-shadow);
+    padding: 30px;
+    max-width: 300px;
+    min-width: 300px;
+    animation: floatDown 0.3s ease-in-out forwards;
+}
+
+.projects_grid i {
+    font-size: 40px;
+    color: var(--highlight);
+}
+
+.title {
+    margin-top: 20px;
+    font-family: "calibre medium";
+    color: var(--lightest);
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-family: "calibre medium";
+    color: var(--medium);
+    margin-bottom: 100px;
+    min-height: 100px;
+}
+
+.tech_container {
+    display: flex;
+    gap: 10px;
+    font-family: "calibre light";
+    color: var(--lightest);
+    margin-bottom: 10px;
+}
+
+.tech_container i {
+    font-size: 24px;
+    margin-right: 10px;
+    color: var(--lightest);
+}
+
+.container:hover .title {
+    color: var(--highlight);
+    transition: color 0.3s ease-in-out;
+}
+
+.container:hover {
+    animation: floatUp 0.3s ease-in-out forwards;
+}
+
+.tech_container i:hover {
+    color: var(--highlight);
+}
+
+@keyframes floatUp {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes floatDown {
+    from {
+        transform: translateY(-10px); }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 790px) {
+
+    .projects_grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+
+        max-width: 1300px;
+        gap: 30px;
+
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+
+        justify-items: center;
+        padding-left: 55px;
+
+    }
+}

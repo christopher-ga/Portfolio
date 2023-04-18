@@ -1,0 +1,96 @@
+@font-face {
+    font-family: 'calibre medium';
+    src: url("../fonts/CalibreMedium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'calibre r';
+    src: url("../fonts/regularcal.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'sf light';
+    src: url("../fonts/SF-Mono-Font-master/SFMono-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'callight';
+    src: url("../fonts/CalibreLight.otf") format("opentype");
+}
+
+
+
+.contact {
+    max-width: 1300px;
+
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    margin: 200px auto 300px;
+}
+
+.contact h2 {
+
+    font-family: "sf light";
+    color: var(--highlight);
+    font-size: 16px;
+}
+
+.contact h3 {
+    margin: 0;
+
+    font-family: "calibre medium";
+    color: var(--lightest);
+    font-size: 53px;
+    margin-top: 10px;
+}
+
+.number_font {
+    font-family: "sf light";
+    font-size: 16px;
+}
+
+.contact p {
+    text-align: center;
+    max-width: 500px;
+    font-size: 20px;
+    font-family: "calibre r";
+    color: var(--medium);
+}
+
+.vertical_icons {
+    display: flex;
+    gap: 50px
+}
+
+.vertical_icons a {
+    margin-top: 30px;
+}
+
+.vertical_icons i {
+    cursor: pointer;
+    font-size: 34px;
+    margin-top: 20px;
+    color: var(--lightest);
+    transform: translateY(0);
+    transition: color 0.5s ease-out, background-color 0.5s ease-out, transform 0.2s ease-out;
+}
+
+.vertical_icons a:hover {
+    color: var(--highlight);
+  
+}
+
+.vertical_icons i:hover {
+    color: var(--highlight);
+    transform: translateY(-5px);
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

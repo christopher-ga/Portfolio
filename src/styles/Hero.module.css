@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'calibre medium';
+    src: url("../fonts/CalibreMedium.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'calibre r';
+    src: url("../fonts/regularcal.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'sf light';
+    src: url("../fonts/SF-Mono-Font-master/SFMono-Light.otf") format("opentype");
+}
+
+@font-face {
+    font-family: 'callight';
+    src: url("../fonts/CalibreLight.otf") format("opentype");
+}
+
+
+.hero_grid {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    min-height: 75vh;
+    flex-direction: column;
+    padding-top: 100px;
+    padding-left: 150px;
+    padding-right: 150px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 100px;
+}
+
+
+.above_header {
+    font-size: 18px;
+    color: var(--highlight);
+    font-family: "sf light";
+    margin-bottom: 20px;
+}
+
+.big_name_header, .big_role_header {
+    font-family: "calibre medium";
+}
+
+.big_name_header {
+    color: var(--lightest);
+    font-size: clamp(40px, 5.7vw, 80px)
+}
+
+.big_role_header {
+    color:var(--medium);
+    font-size: clamp(5px, 5.2vw, 80px)
+}
+
+
+.small_mission_header {
+    max-width: 550px;
+    font-size: 22px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    font-family: "callight";
+    color:var(--medium);
+}
+
+
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.hero_grid p  {
+    opacity: 0;
+    animation: slideIn 0.8s ease-in-out forwards;
+}
+
+.hero_grid h2  {
+    opacity: 0;
+    animation: slideIn 0.8s ease-in-out forwards;
+}
+
+.hero_grid Button  {
+    opacity: 0;
+    animation: slideIn 0.8s ease-in-out forwards;
+}
+
+.hero_grid .above_header {
+    animation-delay: 1s;
+}
+
+.hero_grid .big_name_header {
+    animation-delay: 1.2s;
+}
+
+.hero_grid .big_role_header {
+    animation-delay: 1.4s;
+}
+.hero_grid .small_mission_header {
+    animation-delay: 1.6s;
+}
+
+.hero_grid Button {
+    animation-delay: 1.8s;
+}
+
+.hover_text:hover{
+    color: var(--highlight);
+}
+
+@media (max-width: 790px) {
+    .hero_grid {
+        max-width: 1300px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+

@@ -1,0 +1,127 @@
+@font-face {
+    font-family: 'sf light';
+    src: url("../fonts/SF-Mono-Font-master/SFMono-Light.otf") format("opentype");
+}
+
+.navigation_grid {
+    display: grid;
+    max-width: 2000px;
+    grid-template-columns: 1fr;
+    margin: 0px auto ;
+    padding: 35px 75px 20px;
+    justify-content: right;
+    /*border-bottom: solid white 1px;*/
+    /*box-shadow: 2px 14px 11px 0px rgba(0,0,0,0.14);*/
+    /*background-color: rgba(137,64,41,0.99);*/
+    background-color: var(--test);
+    z-index: 99;
+}
+
+.navigation_grid img {
+
+    width: 40px;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.navigation_items_right {
+    display: grid;
+    grid-template-columns: repeat(4, min-content);
+    gap: 40px;
+    align-items: center;
+    justify-self: end;
+}
+
+.navigation_items_right li {
+    list-style: none;
+    color: var(--lightest);
+    font-family: "sf light";
+    font-size: 13px;
+    transition: color 0.5s ease-out, background-color 0.5s ease-out;
+    cursor: pointer;
+    z-index: 999;
+}
+
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.navigation_items_right li {
+    opacity: 0;
+    animation: slideIn 0.8s ease-in-out forwards;
+}
+
+.navigation_items_right li:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.navigation_items_right li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.navigation_items_right li:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+.navigation_items_right li:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.navigation_items_right li:nth-child(5) {
+    animation-delay: 0.8s;
+}
+
+.hover_text:hover{
+    color: var(--highlight);
+}
+
+.scrolled {
+    animation: fadeIn 0.3s forwards;
+}
+
+.burger {
+    display: none;
+}
+
+@keyframes fadeIn {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+    100% {
+        box-shadow: 2px 14px 11px 0px rgba(0, 0, 0, 0.14);
+    }
+}
+
+
+@media (max-width: 790px) {
+    .navigation_items_right {
+        display: none;
+    }
+
+    .burger {
+        display: none;
+        width: 40px;
+        justify-self: end;
+    }
+
+    .navigation_grid {
+        padding-right: 30px;
+    }
+
+    .navigation_grid {
+        display: none;
+    }
+}

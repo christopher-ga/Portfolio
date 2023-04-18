@@ -1,0 +1,16 @@
+@font-face {
+    font-family: 'sf light';
+    src: url("../fonts/SF-Mono-Font-master/SFMono-Light.otf") format("opentype");
+}
+
+.button {
+    font-family: "sf light" ;
+    background-color: transparent;
+    transition: color 0.5s ease-out, background-color 0.5s ease-out;
+}
+
+.button:hover {
+    /*background-color: var(--darkhighlight) ;*/
+    background-color: var(--darkesttest) ;
+    transition: color 0.5s ease-out, background-color 0.5s ease-out;
+}
